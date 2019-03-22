@@ -3,7 +3,7 @@ const app = express();
 const bodyParser = require("body-parser");
 const mysql = require("./config/db");
 const routes = require('./routes');
-const port = process.env.PORT || 4001;
+const port = process.env.PORT || 5000;
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use('/api', routes);

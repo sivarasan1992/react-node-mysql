@@ -13,12 +13,12 @@ class SearchHeadHunter extends Component {
     return (
       <div className="results">
         <div className="result tableHeader">
-          <div className="span1">Name</div>
-          <div className="span1">Mobile No</div>
-          <div className="span1">Email</div>
-          <div className="span1">No of SE</div>
-          <div className="span1">No of QA</div>
-          <div className="span1">Cost</div>
+          <div className="span1"><h3>Name</h3></div>
+          <div className="span1"><h3>Mobile No</h3></div>
+          <div className="span1"><h3>Email</h3></div>
+          <div className="span1"><h3>No of SE</h3></div>
+          <div className="span1"><h3>No of QA</h3></div>
+          <div className="span1"><h3>Cost</h3></div>
         </div>
         {this.props.headHunders.headHunders &&
           this.props.headHunders.headHunders.length > 0 &&

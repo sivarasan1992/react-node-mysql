@@ -1,9 +1,8 @@
 const mysql = require("../config/db");
 function getHeadHunter(req, res) {
   mysql.query("SELECT * FROM headHunter", function(err, results) {
-    if (err) throw err;
-    console.log(results, "results");
-    return res.send(results);
+    if (err) return res.send({ success: false, message: err });
+    res.send(results);
   });
 }
 
@@ -22,8 +21,8 @@ function createHeadHunter(req, res) {
           req.body.noOfQA
         ],
         function(err, result) {
-          if (err) throw err;
-          return res.send({ success: true });
+          if (err) return res.send({ success: false, message: err });
+          res.send({ success: true });
         }
       );
     }
